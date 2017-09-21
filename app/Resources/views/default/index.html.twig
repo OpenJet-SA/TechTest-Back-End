@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <a href="{{ path('app_flight_index') }}">
+            <button>
+                Show entries
+            </button>
+          </a>
+        </td>
+        <td>
+          <form method="POST" action={{ path('app_flight_create') }}> 
+            <button type="submit">
+                Add an entry
+            </button>
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}
+
